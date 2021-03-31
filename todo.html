@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Todo list</title>
+    <style>
+      body {
+        background-color: rgb(255, 252, 249);
+      }
+
+      .navigation {
+        padding: 5px;
+        background-color: #6b8e23;
+        height: max-content;
+        border-radius: 10px;
+        height: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 10px;
+      }
+
+      .logo {
+        flex-grow: 1;
+      }
+
+      .logo img {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 200px;
+        padding-left: 20px;
+      }
+
+      ul {
+        vertical-align: middle;
+        list-style-type: none;
+        margin: 0px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      ul li,
+      a {
+        padding: 10px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-weight: 800;
+        font-size: large;
+        color: whitesmoke;
+        text-decoration-line: none;
+      }
+      footer {
+        background-color: #6b8e23;
+        color: white;
+        text-align: center;
+        height: fit-content;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        margin-top: 5%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="logo">
+        <img src="logo.gif" />
+      </div>
+      <div class="wPages">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../events.html">Tic Tac Toe</a></li>
+          <li><a style="color: salmon" href="#">TODO</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <div class="time">
+        <span id="clock"> </span>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Item</label>
+        <input
+          type="email"
+          class="form-control"
+          id="Name"
+          aria-describedby="emailHelp"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >Tell us what you want to do</small
+        >
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" id="Description" rows="3"></textarea>
+      </div>
+      <div class="form-group form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="Important"
+          value="Yes"
+        />
+        <label class="form-check-label" for="exampleCheck1">Important</label>
+      </div>
+      <button type="submit" id="add" class="btn btn-success">
+        Add to List
+      </button>
+      <button class="btn btn-success" onclick="clearStr()">Clear List</button>
+
+      <div id="items" class="my-4">
+        <h2>Your Items</h2>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Sno.</th>
+              <th scope="col">Item title</th>
+              <th scope="col">Item Description</th>
+              <th scope="col">Is Important</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <footer>
+      Concept & implementation by : Siddhant Sharma || Kriti Kapoor || Aditi
+      Chauhan
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
