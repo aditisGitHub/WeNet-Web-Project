@@ -1,3 +1,8 @@
+function check(){
+  document.getElementById('click1').click();
+}
+
+
 var currentSlide = 1;
 function showSlide(slideIndex) {
 const slides = document.getElementsByClassName('slide');
